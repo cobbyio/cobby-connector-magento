@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cobby_Connector>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Api />
+            </depends>            
+        </Cobby_Connector>
+    </modules>
+</config>

@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+
+            <cobby_catalog_product_attribute_set translate="title" module="cobby_connector">
+                <model>cobby_connector/catalog_product_attribute_set_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector">
+                        <method>items</method>
+                    </export>
+                </methods>
+            </cobby_catalog_product_attribute_set>
+
+            <cobby_catalog_category translate="title" module="cobby_connector">
+                <model>cobby_connector/catalog_category_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_catalog_category>
+
+            <cobby_catalog_product translate="title" module="cobby_connector">
+                <model>cobby_connector/catalog_product_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <updateSkus translate="title" module="cobby_connector"/>
+                    <getAllIds translate="title" module="cobby_connector"/>
+                    <updateWebsites translate="title" module="cobby_connector" />
+                </methods>
+            </cobby_catalog_product>
+
+            <cobby_catalog_product_attribute translate="title" module="cobby_connector">
+                <model>cobby_connector/catalog_product_attribute_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <info translate="title" module="cobby_connector"/>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+                <faults module="catalog">
+                    <attribute_not_exists>
+                        <code>-32001</code>
+                        <message>Requested attribute doesn't exist</message>
+                    </attribute_not_exists>
+                    <attribute_set_not_exists>
+                        <code>-32002</code>
+                        <message>Requested attribute_set doesn't exist</message>
+                    </attribute_set_not_exists>
+                </faults>
+            </cobby_catalog_product_attribute>
+
+            <cobby_catalog_product_attribute_option>
+                <model>cobby_connector/catalog_product_attribute_option_api</model>
+                <methods>
+                    <import translate="title" module="cobby_connector"/>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+                <faults module="catalog">
+                    <attribute_not_exists>
+                        <code>-32001</code>
+                        <message>Requested attribute doesn't exist</message>
+                    </attribute_not_exists>
+                </faults>
+            </cobby_catalog_product_attribute_option>
+
+            <cobby_catalog_product_type_configurable>
+                <model>cobby_connector/catalog_product_type_configurable_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <assign translate="title" module="catalog"/>
+                </methods>
+            </cobby_catalog_product_type_configurable>
+
+            <cobby_core_website translate="title" module="cobby_connector">
+                <model>cobby_connector/core_website_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_website>
+
+            <cobby_core_store>
+                <model>cobby_connector/core_store_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_store>
+
+            <cobby_storegroup>
+                <model>cobby_connector/core_store_group_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_storegroup>
+
+            <cobby_core_config>
+                <model>cobby_connector/core_config_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                    <active translate="title" module="cobby_connector"/>
+                    <report translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_config>
+
+            <cobby_core_debug>
+                <model>cobby_connector/core_debug_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_debug>
+
+            <cobby_core_acl>
+                <model>cobby_connector/core_acl_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_acl>
+
+            <cobby_core_setup>
+                <model>cobby_connector/core_setup_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                    <import translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_setup>
+
+            <cobby_customer_group>
+                <model>cobby_connector/customer_group_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_customer_group>
+
+            <cobby_export>
+                <model>cobby_connector/export_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <exportProducts translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_export>
+
+            <cobby_import_product>
+                <model>cobby_connector/import_product_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <updateCategoryAssociations translate="title" module="cobby_connector"/>
+                    <importProducts translate="title" module="cobby_connector"/>
+                    <updateStock translate="title" module="cobby_connector"/>
+                    <updateLink translate="title" module="cobby_connector"/>
+                    <updateGroupedProductAssociations translate="title" module="cobby_connector"/>
+                    <updateConfigurableProducts translate="title" module="cobby_connector"/>
+                    <updateMedia translate="title" module="cobby_connector"/>
+                    <updateTierPrices translate="title" module="cobby_connector"/>
+                    <updateGroupPrices translate="title" module="cobby_connector"/>
+                    <deleteDuplicateImages translate="title" module="cobby_connector"/>
+                    <updateUrl translate="title" module="cobby_connector"/>
+                    <updateCustomOptions translate="title" module="cobby_connector"/>
+                    <updateBundleOptions translate="title" module="cobby_connector"/>
+                    <start translate="title" module="cobby_connector"/>
+                    <finish translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_import_product>
+
+            <cobby_indexer>
+                <model>cobby_connector/indexer_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <changeStatus translate="title" module="cobby_connector" />
+                    <export translate="title" module="cobby_connector"/>
+                    <reindexProducts translate="title" module="cobby_connector" />
+                </methods>
+            </cobby_indexer>
+
+            <cobby_queue>
+                <model>cobby_connector/queue_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <export translate="title" module="cobby_connector"/>
+                    <getMaxQueueId translate="title" module="cobby_connector" />
+					<reset translate="title" module="cobby_connector" />
+                </methods>
+            </cobby_queue>
+
+            <cobby_core_translate>
+                <model>cobby_connector/core_translate_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <getTranslation translate="title" module="cobby_connector"/>
+                    <getLocales translate="title" module="cobby_connector"/>
+                </methods>
+            </cobby_core_translate>
+
+            <cobby_cache>
+                <model>cobby_connector/cache_api</model>
+                <acl>cobby</acl>
+                <methods>
+                    <purgeProducts translate="title" module="cobby_connector" />
+                    <purgeCategories translate="title" module="cobby_connector" />
+                </methods>
+            </cobby_cache>
+        </resources>
+
+        <resources_alias>
+            <cobby_website>cobby_website</cobby_website>
+            <cobby_store>cobby_store</cobby_store>
+            <cobby_storegroup>cobby_storegroup</cobby_storegroup>
+            <cobby_core>cobby_core</cobby_core>
+        </resources_alias>
+
+        <acl>
+            <resources>
+                <cobby translate="title" module="cobby_connector">
+                    <title>cobby</title>
+                </cobby>
+            </resources>
+        </acl>
+
+        <adapters>
+            <cobby_connector_json>
+                <model>cobby_connector/api_server_adapter_json</model>
+                <handler>cobby_connector_json</handler>
+                <active>1</active>
+            </cobby_connector_json>
+            <cobby_connector_html>
+                <model>cobby_connector/api_server_adapter_html</model>
+                <handler>cobby_connector_json</handler>
+                <active>1</active>
+            </cobby_connector_html>
+        </adapters>
+        <handlers>
+            <cobby_connector_json>
+                <model>cobby_connector/api_server_handler_json</model>
+            </cobby_connector_json>
+        </handlers>
+    </api>
+</config>
