@@ -1,20 +1,8 @@
 <?php
 /*
- * Copyright 2013 mash2 GbR https://www.cobby.io
- *
- * ATTRIBUTION NOTICE
- * Parts of this work are adapted from Branko Ajzele
- * Original title Inchoo_Api
- * The work can be found http://ext.2magento.com/Inchoo_Api.html
- *
- * ORIGINAL COPYRIGHT INFO
- *
- * author      Branko Ajzele, ajzele@gmail.com
- * category    Inchoo
- * package     Inchoo_Api
- * copyright   Copyright (c) Inchoo LLC (http://inchoo.net)
- * license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*/
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
+ */
 
 /**
  * Json Xml Rpc webservice controller

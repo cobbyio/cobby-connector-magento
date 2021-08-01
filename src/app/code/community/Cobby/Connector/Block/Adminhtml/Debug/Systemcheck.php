@@ -1,4 +1,8 @@
 <?php
+/*
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
+ */
 
 class Cobby_Connector_Block_Adminhtml_Debug_Systemcheck extends Mage_Adminhtml_Block_Abstract
 {
@@ -7,7 +11,6 @@ class Cobby_Connector_Block_Adminhtml_Debug_Systemcheck extends Mage_Adminhtml_B
     protected $memory;
     protected $maintenance;
     protected $indexer;
-    protected $url;
     protected $cobbyActive;
     protected $cobbyVersion;
 
@@ -21,7 +24,6 @@ class Cobby_Connector_Block_Adminhtml_Debug_Systemcheck extends Mage_Adminhtml_B
         $this->setPhpVersion();
         $this->setMaintenanceMode();
         $this->setIndexerStatus();
-        $this->setUrl();
         $this->setCobbyActive();
         $this->setCobbyVersion();
     }
@@ -44,11 +46,6 @@ class Cobby_Connector_Block_Adminhtml_Debug_Systemcheck extends Mage_Adminhtml_B
     public function getIndexerStatus()
     {
         return $this->htmlBuilder($this->indexer);
-    }
-
-    public function getUrlCheck()
-    {
-        return $this->htmlBuilder($this->url);
     }
 
     public function getCobbyActive()
@@ -128,11 +125,6 @@ class Cobby_Connector_Block_Adminhtml_Debug_Systemcheck extends Mage_Adminhtml_B
     private function setIndexerStatus()
     {
         $this->indexer = $this->helper->checkIndexerStatus();
-    }
-
-    private function setUrl()
-    {
-        $this->url = $this->helper->checkUrl();
     }
 
     private function setCobbyActive()

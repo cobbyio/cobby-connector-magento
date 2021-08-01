@@ -1,6 +1,11 @@
 <?php
+/*
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
+ */
+
 /**
- *
+ * Class Cobby_Connector_Helper_Systemcheck
  */
 
 class Cobby_Connector_Helper_Systemcheck extends Mage_Core_Helper_Abstract
@@ -31,7 +36,6 @@ class Cobby_Connector_Helper_Systemcheck extends Mage_Core_Helper_Abstract
             'memory' => $this->checkMemory(),
             'maintenance' => $this->checkMaintenanceMode(),
             'indexer' => $this->checkIndexerStatus(),
-            'url' => $this->checkUrl(),
             'cobby_active' => $this->checkCobbyActive(),
             'cobby_version' => $this->checkCobbyVersion()
         );
@@ -126,30 +130,6 @@ class Cobby_Connector_Helper_Systemcheck extends Mage_Core_Helper_Abstract
         if (!empty($runningIndexers)) {
             $value = $this->__('Indexing is in progress for: ') . implode('; ', $runningIndexers);
             $code = self::ERROR;
-            $link = self::URL;
-        }
-
-        return array(self::VALUE => $value, self::CODE => $code, self::LINK => $link);
-    }
-
-    public function checkUrl()
-    {
-        $value = $this->__('URL is up to date');
-        $code = self::OK;
-        $link = '';
-
-        $baseUrl = Mage::helper('cobby_connector/settings')->getDefaultBaseUrl();
-        $cobbyUrl = Mage::helper('cobby_connector/settings')->getCobbyUrl();
-
-        $len = strlen($cobbyUrl);
-
-        if (substr($baseUrl, 0, $len) !== $cobbyUrl && !empty($cobbyUrl)) {
-            $value = $this->__('The cobby URL doesn’t match the base URL, save config or disable cobby');
-            $code = self::ERROR;
-            $link = self::URL;
-        } else if (empty($cobbyUrl)){
-            $value = $this->__("The URL can't be checked, save config");
-            $code = self::EXCEPTION;
             $link = self::URL;
         }
 

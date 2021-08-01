@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mash2
- * Date: 30.07.18
- * Time: 09:49
+/*
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
  */
-
 
 /**
  * Class Cobby_Connector_Model_Import_Product_Uploader

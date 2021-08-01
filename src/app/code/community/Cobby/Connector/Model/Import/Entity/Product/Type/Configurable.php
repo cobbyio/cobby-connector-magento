@@ -1,19 +1,8 @@
 <?php
 /*
- * Copyright 2013 mash2 GbR https://www.cobby.io
- *
- * ATTRIBUTION NOTICE
- * Parts of this work are adapted from Andreas von Studnitz
- * Original title AvS_FastSimpleImport
- * The work can be found https://github.com/avstudnitz/AvS_FastSimpleImport
- *
- * ORIGINAL COPYRIGHT INFO
- *
- * category   AvS
- * package    AvS_FastSimpleImport
- * author     Andreas von Studnitz <avs@avs-webentwicklung.de>
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
  */
-
 
 /**
  * Cobby export entity product type simple configurable

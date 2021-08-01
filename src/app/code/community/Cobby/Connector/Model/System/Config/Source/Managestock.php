@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Slavko
- * Date: 09.02.2017
- * Time: 16:25
+/*
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
  */
-
 class Cobby_Connector_Model_System_Config_Source_Managestock
 {
     public function toOptionArray()

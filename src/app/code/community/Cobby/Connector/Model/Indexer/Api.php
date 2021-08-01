@@ -1,28 +1,8 @@
 <?php
 /*
- * Copyright 2013 mash2 GbR https://www.cobby.io
- *
- * ATTRIBUTION NOTICE
- * Parts of this work are adapted from Daniel Sloof
- * Original title Danslo_ApiImport_Model_Observer
- * The work can be found https://github.com/danslo/ApiImport
- *
- * ORIGINAL COPYRIGHT INFO
- *
- * Copyright 2011 Daniel Sloof
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+ * @copyright Copyright (c) 2021 mash2 GmbH & Co. KG. All rights reserved.
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0).
+ */
 
 /**
  * Cobby indexer api
