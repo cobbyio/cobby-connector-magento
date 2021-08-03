@@ -28,12 +28,10 @@ class Cobby_Connector_Model_Core_Config_Api extends Mage_Api_Model_Resource_Abst
     );
 
     private $settings;
-    private $systemCheck;
 
     public function __construct()
     {
         $this->settings = Mage::helper('cobby_connector/settings');
-        $this->systemCheck = Mage::helper('cobby_connector/systemcheck');
     }
 
     /**
@@ -92,12 +90,5 @@ class Cobby_Connector_Model_Core_Config_Api extends Mage_Api_Model_Resource_Abst
         $this->settings->setCobbyActive($value);
 
         return $data;
-    }
-
-    public function report()
-    {
-        $result= $this->systemCheck->getReport();
-
-        return $result;
     }
 }

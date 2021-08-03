@@ -107,7 +107,6 @@
                 <methods>
                     <export translate="title" module="cobby_connector"/>
                     <active translate="title" module="cobby_connector"/>
-                    <report translate="title" module="cobby_connector"/>
                 </methods>
             </cobby_core_config>
 
