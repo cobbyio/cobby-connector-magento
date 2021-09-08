@@ -16,15 +16,12 @@ class Cobby_Connector_Helper_Resource extends Mage_Core_Helper_Abstract
      * @throws Exception
      * @return string
      */
-    public function getNextAutoincrement($tableName)
+    public function getNextAutoincrement($tableName, $primaryKey)
     {
-        $connection  = Mage::getSingleton('core/resource')->getConnection('write');
-        $entityStatus = $connection->showTableStatus($tableName);
-
-        if (empty($entityStatus['Auto_increment'])) {
-            Mage::throwException(Mage::helper('importexport')->__('Can not get autoincrement value'));
-        }
-        return $entityStatus['Auto_increment'];
+        $connection = Mage::getSingleton('core/resource')->getConnection('read');
+        $select = $connection->select();
+        $select->from($tableName, 'MAX('.$primaryKey.')');
+        $result = (int)$connection->fetchOne($select) +1;
+        return $result;
     }
-
 }

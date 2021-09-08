@@ -35,8 +35,7 @@ class Cobby_Connector_Model_Import_Product_Link extends Cobby_Connector_Model_Im
     public function __construct()
     {
         parent::__construct();
-
-        $this->linkTable = $this->resourceModel->getTableName('catalog_product_link');
+        $this->linkTable = $this->resourceModel->getTableName('catalog_product_link', 'link_id');
         $this->resourceHelper = Mage::helper('cobby_connector/resource');
     }
 
@@ -45,7 +44,7 @@ class Cobby_Connector_Model_Import_Product_Link extends Cobby_Connector_Model_Im
         $result = array();
 
         $positionAttrId = array();
-        $nextLinkId     = $this->resourceHelper->getNextAutoincrement($this->linkTable);
+        $nextLinkId     = $this->resourceHelper->getNextAutoincrement($this->linkTable, 'link_id');
 
         // pre-load 'position' attributes ID for each link type once
         foreach ($this->linkNameToId as $linkName => $linkTypeId) {
