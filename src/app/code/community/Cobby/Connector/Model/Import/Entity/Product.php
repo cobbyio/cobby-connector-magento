@@ -571,9 +571,8 @@ class Cobby_Connector_Model_Import_Entity_Product extends Mage_ImportExport_Mode
                 $valid = true;
                 break;
         }
-
         if (!$valid) {
-            $this->addRowError(Mage::helper('importexport')->__("Invalid value for '%s'") . '. ' . $message, $rowNum, $attrCode);
+            $this->addRowError($message, $rowNum, $attrCode);
         } else if (!empty($attrParams['is_unique'])) {
             if (isset($this->_uniqueAttributes[$attrCode][$rowData[$attrCode]])) {
                 $this->addRowError(Mage::helper('importexport')->__("Duplicate Unique Attribute for '%s'"), $rowNum, $attrCode);
@@ -584,6 +583,40 @@ class Cobby_Connector_Model_Import_Entity_Product extends Mage_ImportExport_Mode
         }
 
         return (bool)$valid;
+    }
+
+    /**
+     * @param string $errorCode
+     * @param int $errorRowNum
+     * @param null $colName
+     * @return Cobby_Connector_Model_Import_Entity_Product
+     */
+    public function addRowError($errorCode, $errorRowNum, $colName = null)
+    {
+        $sku = $this->_source->current()['sku'];
+        //Error Object
+        $error =  array(
+            'sku' => $sku,
+            "entity_id" => $this->_source->current()['_id'],
+            "error" => true,
+            "attribute_code" => $colName,
+            "attribute_value" => $this->_source->current()[$colName],
+            "message" => $errorCode
+        );
+
+        $this->_errors[$sku][] = $error; //Array with all errors
+        $this->_invalidRows[$errorRowNum] = true;
+        $this->_errorsCount ++;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getErrorMessages()
+    {
+        return $this->_errors;
     }
 
     /**

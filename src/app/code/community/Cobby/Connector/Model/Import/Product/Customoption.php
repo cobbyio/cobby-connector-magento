@@ -29,8 +29,8 @@ class Cobby_Connector_Model_Import_Product_Customoption extends Cobby_Connector_
         $typeTitleTable = $coreResource->getTableName('catalog/product_option_type_title');
         $typeValueTable = $coreResource->getTableName('catalog/product_option_type_value');
 
-        $nextAutoOptionId   = $this->resourceHelper->getNextAutoincrement($optionTable);
-        $nextAutoValueId    = $this->resourceHelper->getNextAutoincrement($typeValueTable);
+        $nextAutoOptionId   = $this->resourceHelper->getNextAutoincrement($optionTable, 'option_id');
+        $nextAutoValueId    = $this->resourceHelper->getNextAutoincrement($typeValueTable, 'option_type_id');
 
         $productIds = array_keys($rows);
         $existingProductIds = $this->loadExistingProductIds($productIds);

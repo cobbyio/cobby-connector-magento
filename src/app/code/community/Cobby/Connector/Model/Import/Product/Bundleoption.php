@@ -27,8 +27,8 @@ class Cobby_Connector_Model_Import_Product_Bundleoption extends Cobby_Connector_
         $selectionPriceTable    = $coreResource->getTableName('bundle/selection_price');
         $relationTable          = $coreResource->getTableName('catalog/product_relation');
 
-        $nextAutoOptionId       = $this->resourceHelper->getNextAutoincrement($optionTable);
-        $nextAutoSelectionId    = $this->resourceHelper->getNextAutoincrement($selectionTable);
+        $nextAutoOptionId       = $this->resourceHelper->getNextAutoincrement($optionTable, 'option_id');
+        $nextAutoSelectionId    = $this->resourceHelper->getNextAutoincrement($selectionTable, 'selection_id');
 
         $productIds = array_keys($rows);
         $existingProductIds = $this->loadExistingProductIds($productIds);
