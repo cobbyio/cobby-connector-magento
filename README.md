@@ -26,11 +26,11 @@ In order to use cobby with Magento, a cobby account has to be created beforehand
 If you don't have a cobby account:
 
 1. Sign up for a free trial at [www.cobby.io](http://www.cobby.io)
-2. After you have signed up to cobby, follow the steps of the [configuration wizard](https://www.cobby.io/configure-cobby-in-magento-1/)
+2. After you have signed up to cobby, follow the steps of the [configuration wizard](https://www.cobby.io/how-to-set-up-cobby-in-magento-1/)
 
 # Support
 
-If you have any issues with this extension, open an issue on [GitHub](https://github.com/cobbyio/cobby-connector-magento2/issues).
+If you have any issues with this extension, open an issue on [GitHub](https://github.com/cobbyio/cobby-connector-magento/issues).
 Alternatively feel free to contact us via email at support@cobby.io or via our website [www.cobby.io](http://www.cobby.io).
 
 # Contribution
