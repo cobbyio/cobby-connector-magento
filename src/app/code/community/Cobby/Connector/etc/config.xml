@@ -322,14 +322,7 @@
             </adminhtml>
         </routers>
     </admin>
-    <adminhtml>
-        <layout>
-            <updates>
-                <cobby_connector>
-                    <file>cobby.xml</file>
-                </cobby_connector>
-            </updates>
-        </layout>
+    <adminhtml> 
         <translate>
             <modules>
                 <cobby_connector>
