@@ -7,7 +7,7 @@
 <config>
     <modules>
         <Cobby_Connector>
-            <version>2.3.1</version>
+            <version>2.4.1</version>
         </Cobby_Connector>
     </modules>
     <global>
@@ -323,13 +323,6 @@
         </routers>
     </admin>
     <adminhtml>
-        <layout>
-            <updates>
-                <cobby_connector>
-                    <file>cobby.xml</file>
-                </cobby_connector>
-            </updates>
-        </layout>
         <translate>
             <modules>
                 <cobby_connector>
@@ -348,7 +341,7 @@
                 <license_key>cobby license key</license_key>
                 <overwrite_images>0</overwrite_images>
                 <new_api_user>cobby.api</new_api_user>
-                <cobby_version>2.3.1.1</cobby_version>
+                <cobby_version>2.4.1.1</cobby_version>
                 <product_category_position>1</product_category_position>
             </settings>
             <stock>
