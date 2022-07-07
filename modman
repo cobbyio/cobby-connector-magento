@@ -2,5 +2,3 @@ src/app/code/community/Cobby/Connector app/code/community/Cobby/Connector/
 src/app/etc/modules/Cobby_Connector.xml app/etc/modules/Cobby_Connector.xml
 src/app/locale/de_DE/Cobby_Connector.csv app/locale/de_DE/Cobby_Connector.csv
 src/app/locale/en_US/Cobby_Connector.csv app/locale/en_US/Cobby_Connector.csv
-src/app/design/adminhtml/default/default/layout/cobby.xml app/design/adminhtml/default/default/layout/cobby.xml
-src/app/design/adminhtml/default/default/template/cobby app/design/adminhtml/default/default/template/cobby
